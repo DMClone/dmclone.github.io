@@ -17,3 +17,8 @@ body {
     background-size: 100vw 100%;
     background-attachment: scroll;
 }
+
+.card {
+    min-width: 500px;
+    margin: 3px;
+}
