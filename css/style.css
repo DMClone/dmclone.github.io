@@ -13,7 +13,7 @@
 }
 
 body {
-background-image: url('../img/Contour Line.svg');
-background-size: 100vw 100%;
-background-attachment: scroll;
+    background-image: url('../img/Contour Line.svg');
+    background-size: 100vw 100%;
+    background-attachment: scroll;
 }
