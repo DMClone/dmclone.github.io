@@ -1,20 +1,16 @@
 {
-    "data": [
+    "roc": [
         {
-            "roc": [
-                {
-                    "title": "Beste game 1",
-                    "img": "lol 1",
-                    "description": "Leuk spel 1",
-                    "link": "https://www.youtube.com/"
-                },
-                {
-                    "title": "Beste game 2",
-                    "img": "lol 2",
-                    "description": "Leuk spel 2",
-                    "link": "https://www.youtube.com/"
-                }
-            ]
+            "title": "Beste game 1",
+            "img": "lol 1",
+            "description": "Leuk spel 1",
+            "link": "https://www.youtube.com/"
+        },
+        {
+            "title": "Beste game 2",
+            "img": "lol 2",
+            "description": "Leuk spel 2",
+            "link": "https://www.youtube.com/"
         }
     ]
 }
