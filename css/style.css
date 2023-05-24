@@ -8,6 +8,14 @@
     transition: all 0.3s ease-in-out;
 }
 
+.index-box-1 {
+    margin-top: 150px;
+    background-color: aliceblue;
+    border: solid antiquewhite 2px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: larger;
+}
+
 .blue {
     background-color: blue;
 }
@@ -21,6 +29,7 @@ body {
 .card {
     min-width: 500px;
     max-width: 500px;
+    max-height: 900px;
     margin: 3px;
     text-align: center;
     font-family: 'avante garde';
