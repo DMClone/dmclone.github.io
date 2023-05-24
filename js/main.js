@@ -27,4 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // if
 
 });
-  // DOMContentLoaded  end
+// DOMContentLoaded  end
+
+
+const rocDiv = document.querySelector('.rocdiv');
