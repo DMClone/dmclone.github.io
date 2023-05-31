@@ -31,3 +31,28 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 const rocDiv = document.querySelector('.rocdiv');
+
+let C = 0;
+
+  fetch("../json/projects.json")
+      .then(response => response.json())
+      .then(data => {
+          console.log(data);
+          for (A = 0; A <= data.roc.length; A++) {
+            const useData = data.roc[A];
+            console.log(useData);
+            console.log(A);
+            console.log('hoi');
+            rocDiv.innerHTML +=
+            `<div class="card">
+            <img class="card-img-top"
+                src="${useData.img}"
+                alt="Card image cap">
+            <div class="card-body">
+                <h4 class="card-title">${useData.title}</h4>
+                <p class="card-text">${useData.description}</p>
+                <a href="${useData.link}" class="card-link stretched-link">Card link</a>
+            </div>
+        </div>`
+          }
+      });

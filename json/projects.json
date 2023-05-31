@@ -1,16 +1,22 @@
 {
     "roc": [
         {
-            "title": "Beste game 1",
-            "img": "lol 1",
+            "title": "Hoger Lager",
+            "img": "../img/HL.png",
             "description": "Leuk spel 1",
-            "link": "https://www.youtube.com/"
+            "link": "https://dmclone.github.io/HogerLager/"
         },
         {
-            "title": "Beste game 2",
-            "img": "lol 2",
+            "title": "Cookie Clicker",
+            "img": "../img/CK.png",
             "description": "Leuk spel 2",
-            "link": "https://www.youtube.com/"
+            "link": "https://dmclone.github.io/CookieClicker/"
+        },
+        {
+            "title": "Escape Room",
+            "img": "../img/ER.png",
+            "description": "Leuk spel 3",
+            "link": "https://dmclone.github.io/EscapeRoom/"
         }
     ]
 }
