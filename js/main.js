@@ -1,5 +1,3 @@
-console.log(' hallo');
-
 document.addEventListener("DOMContentLoaded", function () {
 
   el_autohide = document.querySelector('.autohide');
@@ -29,30 +27,51 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 // DOMContentLoaded  end
 
-
+const gluetcDiv = document.querySelector('.gluetcdiv');
 const rocDiv = document.querySelector('.rocdiv');
 
 let C = 0;
 
-  fetch("../json/projects.json")
-      .then(response => response.json())
-      .then(data => {
-          console.log(data);
-          for (A = 0; A <= data.roc.length; A++) {
-            const useData = data.roc[A];
-            console.log(useData);
-            console.log(A);
-            console.log('hoi');
-            rocDiv.innerHTML +=
-            `<div class="card">
+fetch("../json/projects.json")
+  .then(response => response.json())
+  .then(data => {
+    console.log(data.gluetc.length);
+    for (A = 0; A <= data.gluetc.length; A++) {
+      const useData = data.gluetc[A];
+      if (useData != undefined) {
+        gluetcDiv.innerHTML +=
+          `<div class="card">
+            <div class="card-img">
             <img class="card-img-top"
                 src="${useData.img}"
                 alt="Card image cap">
+           </div>
             <div class="card-body">
                 <h4 class="card-title">${useData.title}</h4>
                 <p class="card-text">${useData.description}</p>
                 <a href="${useData.link}" class="card-link stretched-link">Card link</a>
             </div>
         </div>`
-          }
-      });
+        console.log("Looped");
+      }
+    }
+
+    for (A = 0; A <= data.roc.length; A++) {
+      const useData = data.roc[A];
+      if (useData != undefined) {
+        rocDiv.innerHTML +=
+          `<div class="card">
+            <div class="card-img">
+            <img class="card-img-top"
+                src="${useData.img}"
+                alt="Card image cap">
+           </div>
+            <div class="card-body">
+                <h4 class="card-title">${useData.title}</h4>
+                <p class="card-text">${useData.description}</p>
+                <a href="${useData.link}" class="card-link stretched-link">Card link</a>
+            </div>
+        </div>`
+      }
+    }
+  });

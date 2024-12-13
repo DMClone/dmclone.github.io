@@ -26,17 +26,53 @@ body {
     background-attachment: scroll;
 }
 
+.roulettes {
+    background-color: rgba(0, 0, 255, 0.199);
+}
+
+.roulette-Header {
+    text-align: center;
+    font-size: 35px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: aliceblue;
+    border-radius: 5px;
+}
+
 .card {
     min-width: 500px;
     max-width: 500px;
     max-height: 900px;
     margin: 3px;
     text-align: center;
+    margin-top: 2px;
     font-family: 'avante garde';
+    border: 2px solid white;
+    background-color:lavender;
 }
 
 .card-img {
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 500px;
+    margin-top: -2px;
+}
+
+.card-img-top {
+    border: 2px solid purple;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.gluetcdiv {
+    border-radius: 8px;
+    background-color: rgb(184, 192, 185);
+    padding: 4px;
+    margin-bottom: 15px;
+}
+
+.rocdiv {
+    border-radius: 8px;
+    background-color: rgb(192, 184, 184);
+    padding: 4px;
 }

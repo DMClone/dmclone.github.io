@@ -1,4 +1,26 @@
 {
+    "glu": [
+        {
+            "title": "Hoger Lager",
+            "img": "../img/HL.png",
+            "description": "Leuk spel 1",
+            "link": "https://dmclone.github.io/HogerLager/"
+        }
+    ],
+    "gluetc": [
+        {
+            "title": "Niet relevant web ding",
+            "img": "../img/ER.png",
+            "description": "Leuk spel 1",
+            "link": "https://dmclone.github.io/HogerLager/"
+        },
+        {
+            "title": "Niet relevant web ding",
+            "img": "../img/ER.png",
+            "description": "Leuk spel 1",
+            "link": "https://dmclone.github.io/HogerLager/"
+        }
+    ],
     "roc": [
         {
             "title": "Hoger Lager",
