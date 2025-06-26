@@ -27,6 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 // DOMContentLoaded  end
 
+const gluDiv = document.querySelector('.gludiv');
 const gluetcDiv = document.querySelector('.gluetcdiv');
 const rocDiv = document.querySelector('.rocdiv');
 
@@ -35,23 +36,38 @@ let C = 0;
 fetch("../json/projects.json")
   .then(response => response.json())
   .then(data => {
-    console.log(data.gluetc.length);
+    for (A = 0; A <= data.glu.length; A++) {
+      const useData = data.glu[A];
+      if (useData != undefined) {
+        gluDiv.innerHTML +=
+          `<div class="card d-flex flex-column">
+                <img class="card-img-top" src="${useData.img}" alt="${useData.altText}">
+                <div class="card-body flex-grow-1">
+                    <h4 class="card-title">${useData.title}</h4>
+                    <p class="card-text">${useData.description}</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-body-secondary">Last updated 3 mins ago</small>
+                </div>
+            </div>`
+        console.log("Looped");
+      }
+    }
+
     for (A = 0; A <= data.gluetc.length; A++) {
       const useData = data.gluetc[A];
       if (useData != undefined) {
         gluetcDiv.innerHTML +=
-          `<div class="card">
-            <div class="card-img">
-            <img class="card-img-top"
-                src="${useData.img}"
-                alt="Card image cap">
-           </div>
-            <div class="card-body">
-                <h4 class="card-title">${useData.title}</h4>
-                <p class="card-text">${useData.description}</p>
-                <a href="${useData.link}" class="card-link stretched-link">Card link</a>
-            </div>
-        </div>`
+          `<div class="card d-flex flex-column">
+                <img class="card-img-top" src="${useData.img}" alt="${useData.altText}">
+                <div class="card-body flex-grow-1">
+                    <h4 class="card-title">${useData.title}</h4>
+                    <p class="card-text">${useData.description}</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-body-secondary">Last updated 3 mins ago</small>
+                </div>
+            </div>`
         console.log("Looped");
       }
     }
@@ -60,18 +76,16 @@ fetch("../json/projects.json")
       const useData = data.roc[A];
       if (useData != undefined) {
         rocDiv.innerHTML +=
-          `<div class="card">
-            <div class="card-img">
-            <img class="card-img-top"
-                src="${useData.img}"
-                alt="Card image cap">
-           </div>
-            <div class="card-body">
-                <h4 class="card-title">${useData.title}</h4>
-                <p class="card-text">${useData.description}</p>
-                <a href="${useData.link}" class="card-link stretched-link">Card link</a>
-            </div>
-        </div>`
+          `<div class="card d-flex flex-column">
+                <img class="card-img-top" src="${useData.img}" alt="${useData.altText}">
+                <div class="card-body flex-grow-1">
+                    <h4 class="card-title">${useData.title}</h4>
+                    <p class="card-text">${useData.description}</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-body-secondary">Last updated 3 mins ago</small>
+                </div>
+            </div>`
       }
     }
   });

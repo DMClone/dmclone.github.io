@@ -1,22 +1,39 @@
 {
     "glu": [
         {
-            "title": "Hoger Lager",
+            "title": "Gun Run",
+            "img": "../img/ER.png",
+            "altText": "Image of Gun Run",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis varius massa sit amet massa fermentum egestas. Vestibulum efficitur justo vel varius scelerisque. Praesent nec nisi sed augue blandit dignissim. Quisque tempus porttitor orci, a bibendum erat pretium nec. Ut lacinia purus erat, ac maximus purus luctus at. Nam consectetur orci Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis varius massa sit amet massa fermentum egestas. Vestibulum efficitur justo vel varius scelerisque. Praesent nec nisi sed augue blandit dignissim. Quisque tempus porttitor orci, a bibendum erat pretium nec. Ut lacinia purus erat, ac maximus purus luctus at. Nam consectetur orci   ",
+            "link": "../projects/glu/gunrun.html"
+        },
+        {
+            "title": "Gun Run",
             "img": "../img/HL.png",
-            "description": "Leuk spel 1",
-            "link": "https://dmclone.github.io/HogerLager/"
+            "altText": "Image of Gun Run",
+            "description": "Send help please",
+            "link": "../projects/glu/gunrun.html"
+        },
+        {
+            "title": "Gun Run",
+            "img": "../img/HL.png",
+            "altText": "Image of Gun Run",
+            "description": "Send help please",
+            "link": "../projects/glu/gunrun.html"
         }
     ],
     "gluetc": [
         {
             "title": "Niet relevant web ding",
             "img": "../img/ER.png",
+            "altText": "Image of Gun Run",
             "description": "Leuk spel 1",
             "link": "https://dmclone.github.io/HogerLager/"
         },
         {
-            "title": "Niet relevant web ding",
+            "title": "Niet relevant web dingetje",
             "img": "../img/ER.png",
+            "altText": "Image of Gun Run",
             "description": "Leuk spel 1",
             "link": "https://dmclone.github.io/HogerLager/"
         }
@@ -25,18 +42,28 @@
         {
             "title": "Hoger Lager",
             "img": "../img/HL.png",
+            "altText": "Image of Gun Run",
             "description": "Leuk spel 1",
             "link": "https://dmclone.github.io/HogerLager/"
         },
         {
             "title": "Cookie Clicker",
             "img": "../img/CK.png",
+            "altText": "Image of Gun Run",
             "description": "Leuk spel 2",
             "link": "https://dmclone.github.io/CookieClicker/"
         },
         {
             "title": "Escape Room",
             "img": "../img/ER.png",
+            "altText": "Image of Gun Run",
+            "description": "Leuk spel 3",
+            "link": "https://dmclone.github.io/EscapeRoom/"
+        },
+        {
+            "title": "Escape Room",
+            "img": "../img/ER.png",
+            "altText": "Image of Gun Run",
             "description": "Leuk spel 3",
             "link": "https://dmclone.github.io/EscapeRoom/"
         }
