@@ -77,6 +77,40 @@ body {
     max-height: 15rem;
 }
 
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.overlay-card {
+    min-width: 20rem;
+    max-width: 40rem;
+    max-height: 70rem;
+    flex: 0 0 auto;
+    margin: 5px;
+    text-align: center;
+    margin-top: 2px;
+    font-family: 'avante garde';
+    border: 2px solid white;
+    border-radius: 10px;
+    background-color: lavender;
+}
+
+.overlay-card-body {
+    overflow-y: auto;
+    max-height: 40rem;
+    padding-left: 35px;
+    padding-right: 35px;
+}
+
 .large-padding {
     padding: calc(25px + 10vw);
 }

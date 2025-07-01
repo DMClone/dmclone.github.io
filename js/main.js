@@ -31,13 +31,14 @@ const gluDiv = document.querySelector('.gludiv');
 const gluetcDiv = document.querySelector('.gluetcdiv');
 const rocDiv = document.querySelector('.rocdiv');
 
-let C = 0;
+var jsonData;
 
 fetch("../json/projects.json")
   .then(response => response.json())
   .then(data => {
-    for (A = 0; A <= data.glu.length; A++) {
-      const useData = data.glu[A];
+    jsonData = data;
+    for (A = 0; A <= jsonData.glu.length; A++) {
+      const useData = jsonData.glu[A];
       if (useData != undefined) {
         gluDiv.innerHTML +=
           `<div class="card d-flex flex-column">
@@ -50,12 +51,11 @@ fetch("../json/projects.json")
                     <small class="text-body-secondary">Last updated 3 mins ago</small>
                 </div>
             </div>`
-        console.log("Looped");
       }
     }
 
-    for (A = 0; A <= data.gluetc.length; A++) {
-      const useData = data.gluetc[A];
+    for (A = 0; A <= jsonData.gluetc.length; A++) {
+      const useData = jsonData.gluetc[A];
       if (useData != undefined) {
         gluetcDiv.innerHTML +=
           `<div class="card d-flex flex-column">
@@ -68,12 +68,11 @@ fetch("../json/projects.json")
                     <small class="text-body-secondary">Last updated 3 mins ago</small>
                 </div>
             </div>`
-        console.log("Looped");
       }
     }
 
-    for (A = 0; A <= data.roc.length; A++) {
-      const useData = data.roc[A];
+    for (A = 0; A <= jsonData.roc.length; A++) {
+      const useData = jsonData.roc[A];
       if (useData != undefined) {
         rocDiv.innerHTML +=
           `<div class="card d-flex flex-column">
@@ -89,3 +88,40 @@ fetch("../json/projects.json")
       }
     }
   });
+
+
+var overlay = document.getElementById("overlay");
+
+// Add event listeners to the body to close the overlay
+document.body.addEventListener("click", function (event) {
+  if (event.target === overlay) {
+    CloseOverlay();
+  }
+
+  else
+  OpenOverlay();
+});
+
+function OpenOverlay() {
+  overlay.style.display = "flex";
+  FillOverlay("glu", 0);
+}
+
+function FillOverlay(key, index) {
+      const useData = jsonData[key][index];
+      if (useData != undefined) {
+        overlay.innerHTML =
+          `<div class="overlay-card">
+                <div class="overlay-card-body">
+                    <h5 class="card-title">${useData.title}</h5>
+                    <p class="card-text">${useData.description}</p>
+                </div>`
+      }
+}
+
+function CloseOverlay() {
+  overlay.innerHTML = null;
+  overlay.style.display = "none";
+  console.log("Overlay closed");
+  
+}
