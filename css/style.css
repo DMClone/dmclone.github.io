@@ -77,14 +77,25 @@ body {
     max-height: 15rem;
 }
 
+.card-button {
+    border: none;
+    background: none;
+    color:black
+}
+
+.card-button:hover {
+    color: 200, 200, 200, 1;
+    background: rgba(0, 0, 0, 0.215);
+}
+
 #overlay {
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
     justify-content: center;
     align-items: center;
     z-index: 1000;
@@ -96,15 +107,16 @@ body {
     max-height: 70rem;
     flex: 0 0 auto;
     margin: 5px;
-    text-align: center;
     margin-top: 2px;
     font-family: 'avante garde';
     border: 2px solid white;
-    border-radius: 10px;
     background-color: lavender;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 .overlay-card-body {
+    text-align: center;
     overflow-y: auto;
     max-height: 40rem;
     padding-left: 35px;
@@ -113,4 +125,29 @@ body {
 
 .large-padding {
     padding: calc(25px + 10vw);
+}
+
+.coolcode {
+    text-align: left;
+    border: 2px solid black;
+    border-radius: 10px;
+    overflow-y: auto;
+    max-height: 40rem;
+    scrollbar-color: rgb(33, 33, 33) transparent;
+    scrollbar-width: thin;
+}
+
+pre {
+    margin: 2px;
+    margin-bottom: 0rem !important;
+}
+
+@media screen and (max-height: 600px) and (max-width: 600px) {
+    #overlay {
+        top : 5%
+    }
+    .overlay-card-body {
+        max-height: 30rem;
+        max-width: 20rem
+    }
 }
