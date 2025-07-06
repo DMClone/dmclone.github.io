@@ -43,7 +43,7 @@ body {
     background-color: rgb(184, 192, 185);
     padding: 4px;
     margin-bottom: 80px;
-    min-height: 500px;
+    min-height: 30rem;
 }
 
 .gludiv {
@@ -60,7 +60,7 @@ body {
 
 .card {
     min-width: 20rem;
-    max-width: 30rem;
+    max-width: 22rem;
     max-height: 40rem;
     flex: 0 0 auto;
     margin: 5px;
@@ -142,12 +142,20 @@ pre {
     margin-bottom: 0rem !important;
 }
 
-@media screen and (max-height: 600px) and (max-width: 600px) {
-    #overlay {
-        top : 5%
+@media screen and (max-height: 640px) {
+    .roulette {
+        min-height: 28rem;
     }
-    .overlay-card-body {
+    .card {
+        max-height: 28rem;
+    }
+    .card-body {
+        max-height: 12rem;
+    }
+    #overlay {
+        top : 5%;
+    }
+    .overlay-card {
         max-height: 30rem;
-        max-width: 20rem
     }
 }
