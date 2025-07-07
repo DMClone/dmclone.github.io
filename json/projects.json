@@ -3,7 +3,7 @@
         {
             "title": "Holy Frog",
             "img": "../img/HolyFrog.png",
-            "altText": "Image of the game Holy Frog with a frog character",
+            "altText": "Image of the game Holy Frog with a frog character looking forward to a level of enemies",
             "description": "Developed in Unity 6, this solo project is a 2D platformer where you control a frog that can jump and shoot. The game features a variety of enemies and obstacles, with the goal of reaching the end of each level as fast as possible. The frog can use its tongue as a rope to swing across gaps. The game includes a timer to track completion time, as well as full controller support for most devices. PC only with an expirimental mobile build.",
             "link": "../projects/glu/gunrun.html",
             "extendedDescriptions": [
@@ -15,78 +15,31 @@
             ]
         },
         {
-            "title": "Gun Run",
-            "img": "../img/HL.png",
-            "altText": "Image of Gun Run",
-            "description": "Send help please",
+            "title": "Just Four Minutes",
+            "img": "../img/JFM.png",
+            "altText": "Image of a 2d game where the player is shooting enemies",
+            "description": "Made in Unity 5, this rogue-lite prototype experiments with a lot of new tech, such as a new input system, dynamic controller rumble and animation controllers/clips. Made in early 2025 for PC only with controller support.",
             "link": "../projects/glu/gunrun.html",
-            "extendedDescription": [
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis varius massa sit amet massa fermentum egestas. Vestibulum efficitur justo vel varius scelerisque. Praesent nec nisi sed augue blandit dignissim. Quisque tempus porttitor orci, a bibendum erat pretium nec. Ut lacinia purus erat, ac maximus purus luctus at. Nam consectetur orci.",
-                "lol"
+            "extendedDescriptions": [
+                "This snippet shows the controller rumble ienumerator being called. When it is called multiple times, it overrides the previous rumble settings and applies them instead. If the duration parameter runs out of time, it resets both frequencies (sides) to 0, assuming no other call interrupts. Before the ienumerator is called, it checks whether the last input was from a gamepad (controller) or something else. If it is a controller, it will call the ienumerator, thus saving on performance."
             ],
-            "codeBlock": [
-                "Console.Log('Hello World');"
+            "code_snippets": [
+                "if (_playerInput.currentControlScheme != \"Keyboard\")\n   {\n      ControllerRumble(gun.rumbleLeft, gun.rumbleRight, gun.rumbleDuration);\n   }\n\nprivate IEnumerator Rumble(float lowFreq, float highFreq, float duration)\n    {\n        Gamepad.current.SetMotorSpeeds(lowFreq, highFreq);\n        yield return new WaitForSeconds(duration);\n        Gamepad.current.SetMotorSpeeds(0, 0);\n    }"
             ]
         },
         {
-            "title": "Gun Run",
-            "img": "../img/HL.png",
-            "altText": "Image of Gun Run",
-            "description": "Send help please",
-            "link": "../projects/glu/gunrun.html"
-        },
-        {
-            "title": "Gun Run",
-            "img": "../img/HL.png",
-            "altText": "Image of Gun Run",
-            "description": "Send help please again 2",
-            "link": "../projects/glu/gunrun.html"
+            "title": "Mage With Rage",
+            "img": "../img/MWR.png",
+            "altText": "Alt text",
+            "description": "Made in Unity 6 with Finnish students during a special program, this third person beat-em-up has cool interactions with other parts of the game: like letting the player launch slimes with a swing attack, and the slime used as a projectile to activate locks! Made in May/June 2025 for PC only.",
+            "extendedDescriptions": [
+                "This snippet shows the switching in modes the slime can be in. (De)activating certain properties and components while activating new ones. While in its ragdoll state, each fixedupdate it moves slow enough, a counter will go up until it reaches a high enough amount to switch it back."
+            ],
+            "code_snippets": [
+                "private bool _controlsSelf = true; // Whether the slime is in control if it's own movement and not by the physics system\n\nprivate int _controlFrames; // Amount of frames the slime should be in control\n\nprivate int _controlFramesRequired = 10; // Amount of frames required to be in control\n\nif (!_controlsSelf && _rb.linearVelocity.magnitude < _controlFrameAmount)\n        {\n            _controlFrames++;\n            if (_controlFrames >= _controlFramesRequired)\n            {\n                ToControl();\n            }\n            return;\n        }\n        else if (!_controlsSelf)\n        {\n            _controlFrames = 0;\n            return;\n        }\n\nprivate void ToControl()\n    {\n        _controlsSelf = true;\n        _controlFrames = 0;\n        DirectionToTarget(_player.position);\n        _canRotate = true;\n        _jumpResetCoroutine = StartCoroutine(JumpAfterControl());\n        _rb.constraints =\n            RigidbodyConstraints.FreezeRotationX\n            | RigidbodyConstraints.FreezeRotationY\n            | RigidbodyConstraints.FreezeRotationZ;\n    }\n\npublic void LoseControl()\n    {\n        _controlsSelf = false;\n        _canJump = false;\n        _canRotate = false;\n        if (_jumpCoroutine != null)\n        {\n            StopCoroutine(_jumpCoroutine);\n            _jumpCoroutine = null;\n        }\n        if (_jumpResetCoroutine != null)\n        {\n            StopCoroutine(_jumpResetCoroutine);\n            _jumpResetCoroutine = null;\n        }\n        _rb.constraints = RigidbodyConstraints.None;\n    }"
+            ]
         }
     ],
-    "gluetc": [
-        {
-            "title": "Niet relevant web ding",
-            "img": "../img/ER.png",
-            "altText": "Image of Gun Run",
-            "description": "Leuk spel 1",
-            "link": "https://dmclone.github.io/HogerLager/"
-        },
-        {
-            "title": "Niet relevant web dingetje",
-            "img": "../img/ER.png",
-            "altText": "Image of Gun Run",
-            "description": "Leuk spel 1",
-            "link": "https://dmclone.github.io/HogerLager/"
-        }
-    ],
-    "roc": [
-        {
-            "title": "Hoger Lager",
-            "img": "../img/HL.png",
-            "altText": "Image of Gun Run",
-            "description": "Leuk spel 1",
-            "link": "https://dmclone.github.io/HogerLager/"
-        },
-        {
-            "title": "Cookie Clicker",
-            "img": "../img/CK.png",
-            "altText": "Image of Gun Run",
-            "description": "Leuk spel 2",
-            "link": "https://dmclone.github.io/CookieClicker/"
-        },
-        {
-            "title": "Escape Room",
-            "img": "../img/ER.png",
-            "altText": "Image of Gun Run",
-            "description": "Leuk spel 3",
-            "link": "https://dmclone.github.io/EscapeRoom/"
-        },
-        {
-            "title": "Escape Room",
-            "img": "../img/ER.png",
-            "altText": "Image of Gun Run",
-            "description": "Leuk spel 3",
-            "link": "https://dmclone.github.io/EscapeRoom/"
-        }
-    ]
+    "gluetc": [],
+    "roc": []
 }

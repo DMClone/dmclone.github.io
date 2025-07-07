@@ -74,7 +74,7 @@ body {
 
 .card-body {
     overflow-y: auto;
-    max-height: 15rem;
+    max-height: 25rem;
 }
 
 .card-button {
