@@ -46,20 +46,20 @@ body {
     min-height: 30rem;
 }
 
-.gludiv {
+.blockonediv {
     background-color: rgb(75, 111, 131);
 }
 
-.gluetcdiv {
+.blocktwodiv {
     background-color: rgb(184, 192, 185);
 }
 
-.rocdiv {
+.blockthreediv {
     background-color: rgb(192, 184, 184);
 }
 
 .card {
-    min-width: 20rem;
+    min-width: 21rem;
     max-width: 22rem;
     max-height: 40rem;
     flex: 0 0 auto;
@@ -70,6 +70,10 @@ body {
     border: 2px solid white;
     border-radius: 10px;
     background-color: lavender;
+}
+
+.card-img-top {
+    max-height: 28rem;
 }
 
 .card-body {
