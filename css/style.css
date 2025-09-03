@@ -8,6 +8,11 @@
     transition: all 0.3s ease-in-out;
 }
 
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0; /* keeps it aligned */
+}
+
 .index-box-1 {
     margin-top: 150px;
     background-color: aliceblue;

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
@@ -14,6 +14,15 @@
     </script>
     <script defer src="js/main.js"></script>
     <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init({
+                publicKey: "TBU0yvOBpjbLEeFQQ",
+            });
+        })();
+    </script>
 </head>
 
 <body>
@@ -26,6 +35,29 @@
             </button>
             <div class="collapse navbar-collapse" id="main_nav">
                 <ul class="navbar-nav ms-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="contactDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Contact
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end p-3" id="contact-form"
+                            aria-labelledby="contactDropdown" style="min-width: 250px;">
+                            <form>
+                                <div class="mb-2">
+                                    <label for="contactEmail" class="form-label">Email</label>
+                                    <input type="name" class="form-control" id="contact-email"
+                                        placeholder="you@example.com">
+                                </div>
+                                <div class="mb-2">
+                                    <label for="contactMessage" class="form-label">Message</label>
+                                    <textarea class="form-control" id="contact-message" rows="2"></textarea>
+                                </div>
+                                <button type="button" class="btn btn-primary btn-sm" onclick="SendEmail()">Send</button>
+                            </form>
+                            <small class="text-muted d-block mt-2">Or contact me on Discord:
+                                clonebutnotreally<br><br>Powered by EmailJS</small>
+                        </div>
+                    </li>
                     <li class="nav-item"><a class="nav-link" href="index.html"> Home </a></li>
                     <li class="nav-item"><a class="nav-link" href="projects.html"> Projects </a></li>
                     <li class="nav-item"><a class="nav-link" target="_blank" href="https://github.com/DMClone"> Github
