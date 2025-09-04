@@ -36,8 +36,12 @@ fetch("../json/projects.json")
     for (A = 0; A <= jsonData.blocktwo.length; A++) {
       const useData = jsonData.blocktwo[A];
       if (useData != undefined) {
-        let itchioButton = ItchioLink(useData.itchio);
+        let webButton = WebLink(useData.gameLink);
         let githubButton = GithubLink(useData.github);
+        let extraButton = "";
+        if (useData.extendedDescriptions != undefined) {
+          extraButton = `<button class="btn btn-primary card-button" onclick="OpenOverlay('blocktwo', '${A}')">View More</button>;`;
+        }
 
         blocktwodiv.innerHTML += `<div class="card d-flex flex-column">
                 <img class="card-img-top" src="${useData.thumbnail}" alt="${useData.altText}">
@@ -47,9 +51,8 @@ fetch("../json/projects.json")
                 </div>
                 <div class="card-footer">
                     <small class="text-body-secondary">
-                    ${itchioButton}
-                        <button class="btn btn-primary card-button" onclick="OpenOverlay('blocktwo', '${A}')">View
-                            More</button>
+                    ${webButton}
+                        ${extraButton}
                             ${githubButton}
                             </small>
                 </div>
@@ -94,6 +97,20 @@ function ItchioLink(itchio) {
       break;
   }
   return itchio;
+}
+
+function WebLink(web) {
+  switch (web) {
+    case "soon":
+      web = `<button class="btn btn-secondary card-button" disabled>Play (Soon)</button>`;
+      break;
+    case "":
+      break;
+    default:
+      web = `<a href="${web}" target="_blank" class="btn btn-secondary card-button">Play</a>`;
+      break;
+  }
+  return web;
 }
 
 function GithubLink(github) {

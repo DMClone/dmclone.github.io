@@ -9,7 +9,8 @@
             "github": "https://github.com/DMClone/Holy-Frog",
             "extendedDescriptions": [
                 "With a heavy focus on physics and controls, making the game feel comfortable and responsive was my main priority. Getting it to work within seconds on controller felt great and actually better than keyboard and mouse.",
-                "Blablabla"
+                "Movement is slippery yet controllable, allowing for quick turns and jumps. You can store momentum by jumping right after landing, which allows for higher skill expression.",
+                "The enemies are meant to be navigated around differently, requiring you to use different techniques to get past them. Sometimes enemies are grouped together so you have to reconsider going near them or looking for a different route."
             ],
             "images": [
                 "../img/HolyFrog.png"
@@ -23,9 +24,12 @@
             "itchio": "",
             "github": "https://github.com/DMClone/Rogue-ish",
             "extendedDescriptions": [
-                "This snippet shows the controller rumble ienumerator being called. When it is called multiple times, it overrides the previous rumble settings and applies them instead. If the duration parameter runs out of time, it resets both frequencies (sides) to 0, assuming no other call interrupts. Before the ienumerator is called, it checks whether the last input was from a gamepad (controller) or something else. If it is a controller, it will call the ienumerator, thus saving on performance."
+                "Game feel is a big focus here, wanting to make the player feel cool and powerful. Controller rumble and screenshake are tuned to give feedback without being too overwhelming.",
+                "Item switching is nice and quick, using different methods on keyboard and controller with neither suffering any downsides."
             ],
-            "images": []
+            "images": [
+                "../img/JFM.png"
+            ]
         },
         {
             "title": "Mage With Rage",
@@ -35,9 +39,12 @@
             "itchio": "https://nielscraft12.itch.io/mage-with-rage",
             "github": "https://github.com/NielsCraft12/MageWIthRage",
             "extendedDescriptions": [
-                "This snippet shows the switching in modes the slime can be in. (De)activating certain properties and components while activating new ones. While in its ragdoll state, each fixedupdate it moves slow enough, a counter will go up until it reaches a high enough amount to switch it back."
+                "The slime I programmed is very bouncy and fun to play with, featuring a ragdoll-like state when it gets hit. It can be launched around and would have been used to solve puzzles and defeat other enemies like a bowling ball.",
+                "The ghost has a fun throwing mechanic where the head will always properly connect back to the body when thrown. It also adjusts the throw velocity based of how far the player is from the ghost, making it easier to hit targets that are further away."
             ],
-            "images": []
+            "images": [
+                "../img/MWR.png"
+            ]
         },
         {
             "title": "The Forgotten Area",
@@ -47,9 +54,11 @@
             "itchio": "https://dmclone.itch.io/the-forgotten-area",
             "github": "https://github.com/GLU-Gaming/twinstick-2024-team-09-red-apple",
             "extendedDescriptions": [
-                "This snippet shows the switching in modes the slime can be in. (De)activating certain properties and components while activating new ones. While in its ragdoll state, each fixedupdate it moves slow enough, a counter will go up until it reaches a high enough amount to switch it back."
+                "The enemies I made are designed with performance in mind, only enabled when within the player's line of sight. They also have different attack patterns and behaviors, making them more interesting to fight against."
             ],
-            "images": []
+            "images": [
+                "../img/TFA.png"
+            ]
         },
         {
             "title": "Charge Forward",
@@ -61,10 +70,37 @@
             "extendedDescriptions": [
                 "Fill"
             ],
-            "images": []
+            "images": [
+                "../img/CF.png"
+            ]
         }
     ],
-    "blocktwo": [],
+    "blocktwo": [
+        {
+            "title": "Higher or Lower",
+            "thumbnail": "../img/HL.png",
+            "altText": "Image of a card game where the player has to guess whether the next number is higher or lower than the current one",
+            "description": "Made in html, css and javascript, this simple game has the player guess whether the next number is higher or lower than the current one. This was the very first group project I've ever done regarding coding in general. Made in early 2023 for web browsers.",
+            "gameLink": "https://dmclone.github.io/HogerLager",
+            "github": "https://github.com/DMClone/HogerLager"
+        },
+        {
+            "title": "Cookie Clicker",
+            "thumbnail": "../img/CK.png",
+            "altText": "Image of a cookie clicker game where the player has to click a cookie to earn points",
+            "description": "Made in html, css and javascript, this simple game has the player click a cookie to earn points. The points can be used to buy upgrades that increase the points earned per click. This was kind of a test as to how I can optimize performance and do accurate calculations while also trying out new ways to make containers and responsive designs. Made in early 2023 for web browsers.",
+            "gameLink": "https://dmclone.github.io/CookieClicker",
+            "github": "https://github.com/DMClone/CookieClicker"
+        },
+        {
+            "title": "Escape Room",
+            "thumbnail": "../img/ER.png",
+            "altText": "Image of an escape room game where the player has to solve puzzles to escape",
+            "description": "Made in html, css and javascript, this simple game has the player solve puzzles to escape a room. This wasn't really that successful, but it allowed me to discover and try out some obscure HTML methods which ended up being quite fun. Made in mid 2023 for web browsers.",
+            "gameLink": "",
+            "github": "https://github.com/DMClone/EscapeRoom"
+        }
+    ],
     "blockthree": [
         {
             "title": "Portfolio Website",
